@@ -19,12 +19,12 @@ template<class T> std::ostream& operator<<(std::ostream& os, const std::vector<T
 }
 
 /**
- * @brief This function joins two given vectors of elements of type T.
+ * @brief This function joins two given vectors of elements of type T into a single vector.
  * 
  * @param v1 The first vector
  * @param v2 The second vector
  */
-template<class T> void join(std::vector<T>& v1, std::vector<T>& v2) noexcept {
+template<class T> void join(std::vector<T>& v1, const std::vector<T>& v2) noexcept {
     for(const auto& i: v2) {
         v1.push_back(i);
     }
